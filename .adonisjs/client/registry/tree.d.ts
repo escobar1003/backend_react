@@ -2,5 +2,7 @@
 import type { routes } from './index.ts'
 
 export interface ApiDefinition {
-
+  usuarios: {
+    index: typeof routes['usuarios.index']
+  }
 }

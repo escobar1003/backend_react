@@ -6,7 +6,12 @@ import type { ApiDefinition } from './tree.d.ts'
 const placeholder: any = {}
 
 const routes = {
-,
+  'usuarios.index': {
+    methods: ["GET","HEAD"],
+    pattern: '/usuarios',
+    tokens: [{"old":"/usuarios","type":0,"val":"usuarios","end":""}],
+    types: placeholder as Registry['usuarios.index']['types'],
+  },
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }
